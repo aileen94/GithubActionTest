@@ -4,7 +4,7 @@ terraform {
   #backend "s3" {
   #  bucket         = "kyler-github-actions-demo-terraform-tfstate"
   #  key            = "terraform.tfstate"
-  #  region         = "us-east-1"
+  #  region         = "eu-central-1
   #  dynamodb_table = "aws-locks"
   #  encrypt        = true
   #}
@@ -12,18 +12,18 @@ terraform {
 
 # Download any stable version in AWS provider of 2.36.0 or higher in 2.36 train
 provider "aws" {
-  region  = "us-east-1"
+  region  = "eu-central-1"
   version = "~> 2.36.0"
 }
 
 
-/* Commented out until after bootstrap
+
 
 # Call the seed_module to build our ADO seed info
 module "bootstrap" {
   source                      = "./modules/bootstrap"
   name_of_s3_bucket           = "kyler-github-actions-demo-terraform-tfstate"
-  dynamo_db_table_name        = "aws-locks"
+//  dynamo_db_table_name        = "aws-locks"
   iam_user_name               = "GitHubActionsIamUser"
   ado_iam_role_name           = "GitHubActionsIamRole"
   aws_iam_policy_permits_name = "GitHubActionsIamPolicyPermits"
