@@ -23,8 +23,8 @@ provider "aws" {
 module "bootstrap" {
   source                      = "./modules/bootstrap"
   name_of_s3_bucket           = "kyler-github-actions-demo-terraform-tfstate"
-//  dynamo_db_table_name        = "aws-locks"
-  iam_user_name               = "GitHubActionsIamUser"
+  dynamo_db_table_name        = "aws-locks"
+  iam_user_name               = "terraform"
   ado_iam_role_name           = "GitHubActionsIamRole"
   aws_iam_policy_permits_name = "GitHubActionsIamPolicyPermits"
   aws_iam_policy_assume_name  = "GitHubActionsIamPolicyAssume"
