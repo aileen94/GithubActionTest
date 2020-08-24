@@ -60,4 +60,3 @@ resource "aws_route_table" "route_table2" {
     Terraform = "true"
   }
 }
-*/
