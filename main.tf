@@ -46,7 +46,7 @@ resource "aws_route_table" "route_table1" {
   vpc_id = aws_vpc.vpc.id
 
   tags = {
-    Name = "RouteTable1"
+    Name = "GithubRouteTable1"
     Terraform = "true"
   }
 }
@@ -56,7 +56,7 @@ resource "aws_route_table" "route_table2" {
   vpc_id = aws_vpc.vpc.id
 
   tags = {
-    Name = "RouteTable2"
+    Name = "GithubRouteTable2"
     Terraform = "true"
   }
 }
